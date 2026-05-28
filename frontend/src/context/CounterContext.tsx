@@ -1,11 +1,11 @@
-import {CreateContext, useContext, useState } from 'react';
+import {createContext, useState } from 'react';
 
 interface CounterContextType {
     count: number;
     increment: () => void;
     decrement: () => void;
 }
-export const CounterContext = CreateContext<CounterContextType>(undefined)
+export const CounterContext = createContext<CounterContextType>(undefined)
 
 export function ContextProvider({children}: {children: React.ReactNode}) {
 
